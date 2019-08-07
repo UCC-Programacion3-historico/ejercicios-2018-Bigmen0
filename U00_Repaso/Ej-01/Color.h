@@ -8,10 +8,11 @@ protected:
     int verde;
     int azul;
 public:
+    Color();
     Color(int,int,int);
     void getcolor(int*,int*,int*);
     void tenirColor(int,int,int);
-    Color operator =(Color);
+    Color operator=(Color);
 };
 
 

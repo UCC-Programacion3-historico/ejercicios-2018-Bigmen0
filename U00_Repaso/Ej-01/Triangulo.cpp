@@ -1,4 +1,5 @@
 #include "Triangulo.h"
+#include "math.h"
 float Triangulo::getAngulo() {
     return angulo;
 }
