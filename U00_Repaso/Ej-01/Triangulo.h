@@ -2,8 +2,12 @@
 #define REPASO_TRIANGULO_H
 
 
-class Triangulo {
-
+class Triangulo:public Geometria{
+protected:
+    float angulo;
+public:
+    Triangulo(float an, float al, float ang, Color col):Geometria(an,al,col){angulo=ang;};
+    float getAngulo();
 };
 
 

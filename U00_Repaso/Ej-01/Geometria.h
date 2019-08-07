@@ -3,7 +3,14 @@
 
 
 class Geometria {
-
+protected:
+    float ancho;
+    float alto;
+    Color col;
+public:
+    Geometria(float,float,Color);
+    virtual float getSuperficie()=0;
+    virtual float getPerimetro()=0;
 };
 
 
