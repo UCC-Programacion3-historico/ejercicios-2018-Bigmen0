@@ -13,5 +13,6 @@ public:
     Geometria(float,float,Color);
     virtual float getSuperficie()=0;
     virtual float getPerimetro()=0;
+    Color getColor();
 };
 #endif //REPASO_GEOMETRIA_H

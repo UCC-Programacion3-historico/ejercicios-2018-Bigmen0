@@ -17,18 +17,22 @@ int main() {
     cout << "Perimetro: " << cir.getPerimetro() << endl;
     cout << "Superficie: " << cir.getSuperficie() << endl;
     cout << "Radio: " << cir.getRadio() << endl;
+    cout << "Color: " << cir.getColor().getR() << " " << cir.getColor().getV() << " " << cir.getColor().getA() << endl;
     cout << endl;
 
     cout << "Cuadrado: " << endl;
     cout << "Perimetro: " << cuad.getPerimetro() << endl;
     cout << "Superficie: " << cuad.getSuperficie() << endl;
     cout << "Diagonal: " << cuad.getDiagonal() << endl;
+    cout << "Color: " << cuad.getColor().getR() << " " << cuad.getColor().getV() << " " << cuad.getColor().getA()
+         << endl;
     cout << endl;
 
     cout << "Triangulo: " << endl;
     cout << "Perimetro: " << tri.getPerimetro() << endl;
     cout << "Superficie: " << tri.getSuperficie() << endl;
     cout << "Angulo: " << tri.getAngulo() << endl;
+    cout << "Color: " << tri.getColor().getR() << " " << tri.getColor().getV() << " " << tri.getColor().getA() << endl;
     cout << endl;
 
     cout << "Ejercicio 00/01\n" << endl;

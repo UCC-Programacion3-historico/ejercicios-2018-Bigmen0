@@ -27,7 +27,7 @@ void Color::tenirColor(int r = -1, int v = -1, int a = -1) {
         azul=a%256;
 }
 
-Color Color::operator=(Color c) {
+Color Color::operator=(const Color c) {
     rojo=c.rojo;
     verde=c.verde;
     azul=c.azul;

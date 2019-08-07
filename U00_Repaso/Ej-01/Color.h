@@ -12,7 +12,10 @@ public:
     Color(int,int,int);
     void getcolor(int*,int*,int*);
     void tenirColor(int,int,int);
-    Color operator=(Color);
+    Color operator=(const Color);
+    int getR(){return rojo;};
+    int getV(){return verde;};
+    int getA(){return azul;};
 };
 
 
