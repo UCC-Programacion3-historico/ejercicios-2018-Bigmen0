@@ -1,6 +1,7 @@
 #ifndef LISTA_H
 #define LISTA_H
 
+#include "nodo.h"
 /**
  * Clase que implementa una Pila generica, ya que puede
  * almacenar cualquier tipo de dato T
@@ -9,7 +10,7 @@
 template<class T>
 class Pila {
 private:
-
+Nodo<T> *tope;
 public:
     Pila();
 
@@ -18,6 +19,8 @@ public:
     void push(T dato);
 
     T pop();
+
+    T peek();
 
     bool esVacia();
 };
@@ -28,7 +31,9 @@ public:
  * @tparam T
  */
 template<class T>
-Pila<T>::Pila() {}
+Pila<T>::Pila() {
+    tope= nullptr;
+}
 
 
 /**
@@ -37,7 +42,10 @@ Pila<T>::Pila() {}
  * @tparam T
  */
 template<class T>
-Pila<T>::~Pila() {}
+Pila<T>::~Pila() {
+    while(tope!= nullptr)
+        pop();
+}
 
 
 /**
@@ -46,7 +54,13 @@ Pila<T>::~Pila() {}
  * @param dato  dato a insertar
  */
 template<class T>
-void Pila<T>::push(T dato) {}
+void Pila<T>::push(T dato) {
+    Nodo<T> *nuevo;
+    nuevo=new Nodo<T>;
+    nuevo->setDato(dato);
+    nuevo->setSiguiente(tope);
+    tope = nuevo;
+}
 
 
 /**
@@ -55,7 +69,16 @@ void Pila<T>::push(T dato) {}
  * @return dato almacenado en el nodo
  */
 template<class T>
-T Pila<T>::pop() {}
+T Pila<T>::pop() {
+    if(tope== nullptr)
+        throw 404;
+
+    Nodo<T> *aBorrar=tope;
+    T dato=tope->getDato();
+    tope=tope->getSiguiente();
+    delete aBorrar;
+    return dato;
+}
 
 /**
  * Responde si la pila se encuentra Vacía
@@ -64,7 +87,13 @@ T Pila<T>::pop() {}
  */
 template<class T>
 bool Pila<T>::esVacia() {
-
+return tope==nullptr;
 }
 
+template <class T>
+T Pila<T>::peek() {
+    if(tope== nullptr)
+      throw 404;
+    return tope->getDato();
+}
 #endif //LISTA_H
