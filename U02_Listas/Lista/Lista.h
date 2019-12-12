@@ -24,7 +24,7 @@ public:
 
     int getTamanio();
 
-    void insertar(int pos, T dato);
+    void insertar(unsigned int pos, T dato);
 
     void insertarPrimero(T dato);
 
@@ -193,7 +193,7 @@ void Lista<T>::remover(int pos) {
 
     if(aux->getSiguiente()== nullptr)
     {
-        throw 405
+        throw 405;
     }
 
     aBorrar=aux->getSiguiente();
@@ -240,7 +240,7 @@ void Lista<T>::vaciar() {
     inicio= nullptr;
 }
 
-
+template <class T>
 void Lista<T>::moverUlti(int pos) {
     Nodo<T> *aux=inicio, aMover;
     int posAct=0;

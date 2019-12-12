@@ -1,7 +1,7 @@
 #include <iostream>
 #include "../Pila/Pila.h"
 
-
+using namespace std;
 bool comparar(char a , char b){
     return int(b)==(int(a)+1);
 }
